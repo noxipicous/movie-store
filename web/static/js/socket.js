@@ -59,13 +59,11 @@ channel.join()
   .receive("ok", resp => { console.log("Joined successfully", resp) })
   .receive("error", resp => { console.log("Unable to join", resp) })
 
-let ticketsDiv = $("#tickets");
+let ticketsDiv = $("#tickets")
 
 channel.on("new_ticket_purchase", payload => {
 	 	console.log(payload)
- 		ticketsDiv.append(`<br/>[${Date()}] 
+ 		ticketsDiv.append(`<br/>[${Date()}] Movie: ${payload.body.movie} Quantity: ${payload.body.quantity}`) 
  	})
-	Movie: ${payload.body.movie}
-	Quantity: ${payload.body.quantity}`)
 
 export default socket

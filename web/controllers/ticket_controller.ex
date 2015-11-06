@@ -7,7 +7,7 @@ defmodule MovieStore.TicketController do
     render(conn, "index.html", tickets: tickets)
   end
   def new(conn, _params) do
-    changeset = Ticket.changeset(%Ticket{})
+    changeset = Ticket.changeset(%Ticket{}) 
     render(conn, "new.html", changeset: changeset, showings: showings)
   end
   def create(conn, %{"ticket" => ticket_params}) do
