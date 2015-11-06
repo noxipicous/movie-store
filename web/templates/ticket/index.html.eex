@@ -12,7 +12,7 @@
   <tbody>
 <%= for ticket <- @tickets do %>
     <tr>
-      <td><%= ticket.showing_id %></td>
+      <td><%= render "movie_info.html", ticket: ticket %></td>
       <td><%= ticket.quantity %></td>
 
       <td class="text-right">
