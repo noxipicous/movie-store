@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :movie_store, MovieStore.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "admin",
+  password: "",
   database: "movie_store_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
