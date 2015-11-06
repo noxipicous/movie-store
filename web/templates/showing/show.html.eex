@@ -1,0 +1,23 @@
+<h2>Show showing</h2>
+
+<ul>
+
+  <li>
+    <strong>Start at:</strong>
+    <%= @showing.start_at %>
+  </li>
+
+  <li>
+    <strong>Theater:</strong>
+    <%= @showing.theater.name %>
+  </li>
+
+  <li>
+    <strong>Movie:</strong>
+    <%= @showing.movie.name %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: showing_path(@conn, :edit, @showing) %>
+<%= link "Back", to: showing_path(@conn, :index) %>
