@@ -63,7 +63,9 @@ let ticketsDiv = $("#tickets")
 
 channel.on("new_ticket_purchase", payload => {
 	 	console.log(payload)
- 		ticketsDiv.append(`<br/>[${Date()}] Movie: ${payload.body.movie} Quantity: ${payload.body.quantity}`) 
+ 		ticketsDiv.append(`<br/>[ ${Date()} ] <strong>Movie: 
+ 			</strong> ${payload.body.movie} 
+ 			<strong>Quantity:</strong> ${payload.body.quantity}`) 
  	})
 
 export default socket
